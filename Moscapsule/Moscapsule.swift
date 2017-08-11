@@ -269,7 +269,7 @@ public struct MQTTMessage {
             }
         }
         
-        let hexString = (payload as Data).map { String(format: "%02.2hhx", $0) }.joined()
+        let hexString = payload.map { String(format: "%02.2hhx", $0) }.joined()
         return hexString
     }
 }
